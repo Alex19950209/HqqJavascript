@@ -13,7 +13,7 @@
             }  
               
             //¹Ø¼ü´úÂë  
-            function checkConnection(){  
+            function checkConnection(){   
                 var networkState=navigator.network.connection.type;  
                 var states={};  
                 states[Connection.UNKNOWN]='Unknown connection';  
