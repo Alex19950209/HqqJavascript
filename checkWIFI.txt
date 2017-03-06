@@ -12,7 +12,7 @@
                 checkConnection();  
             }  
               
-            //¹Ø¼ü´úÂë  
+            //key words  
             function checkConnection(){   
                 var networkState=navigator.network.connection.type;  
                 var states={};  
