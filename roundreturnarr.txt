@@ -1,3 +1,4 @@
+
 Array.prototype.quickSort = function(){
             if(this.length <= 1){ return this;};
             var pivotIndex = Math.floor(this.length / 2);
@@ -46,3 +47,45 @@ Array.prototype.quickSort = function(){
             return arr;
         }
         console.log(cc(5))
+
+
+
+
+	function getRound (min,max){
+            if(!min || !max) return;
+            if(!parseInt(min) || !parseInt(max) || parseInt(max) - parseInt(min) < 0) return;
+            var range = max - min;
+            var rand = Math.random();
+            return (min + Math.round(rand * range));
+        }
+        function checkInArr(arr,b){
+            if(arr.length <= 0) return false;
+            for(var i = 0;i < arr.length;i++){
+                if(arr[i] == b){
+                    return true;
+                }
+            }
+        }
+        function cc(n){
+            if(!n) return [];
+            if(!parseInt(n)) return [];
+            if(parseInt(n) < 1 || parseInt(n) > 32) return [];
+            var a = parseInt(n),
+                arr=[],
+                b;
+            for(var i = 0;i< n;i++){
+                b = getRound(2,32);
+                if(checkInArr(arr,b)){
+                    i--;   
+                }else{
+                    arr.push(b)
+                }   
+            }
+            return arr;
+        }
+        console.log(cc(5))
+
+
+
+
+
