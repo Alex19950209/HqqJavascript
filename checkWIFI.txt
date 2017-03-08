@@ -26,6 +26,58 @@
                   
                 alert('Connection type: '+states[networkState]);  
             }  
+		
+
+
+
+	   function checkConnection() {
+                 var flag  = false;
+                 
+                 if("undefined" != typeof cordova){
+                     var networkState = navigator.connection.type;
+                     if(networkState == 'wifi'){
+                         flag = true;
+                     }
+                 }
+                    return flag;
+            }
+            
+            function IsPC() {
+                var userAgentInfo = navigator.userAgent;
+                var Agents = ["Android", "iPhone",
+                    "SymbianOS", "Windows Phone",
+                    "iPad", "iPod"];
+                var flag = true;
+                for (var v = 0; v < Agents.length; v++) {
+                    if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                        flag = false;
+                        break;
+                    }
+                }
+                return flag;
+            }
+
+            if (IsPC()) {
+                var pcCss = document.createElement('link');
+                pcCss.setAttribute('rel', "stylesheet");
+                pcCss.setAttribute('href', "static/css/pc.css");
+                document.head.appendChild(pcCss);
+            }
+
+            function isIos() {
+                var userAgentInfo = navigator.userAgent;
+                var Agents = ["iPhone", "iPad", "iPod"];
+                var flag = false;
+                for (var v = 0; v < Agents.length; v++) {
+                    if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                        flag = true;
+                        break;
+                    }
+                }
+                return flag;
+            }
+
+
               
         </script>  
     </head>  
