@@ -52,7 +52,6 @@ Array.prototype.quickSort = function(){
 
 
 	function getRound (min,max){
-            if(!min || !max) return;
             if(!parseInt(min) || !parseInt(max) || parseInt(max) - parseInt(min) < 0) return;
             var range = max - min;
             var rand = Math.random();
@@ -67,9 +66,7 @@ Array.prototype.quickSort = function(){
             }
         }
         function cc(n){
-            if(!n) return [];
-            if(!parseInt(n)) return [];
-            if(parseInt(n) < 1 || parseInt(n) > 32) return [];
+            if(!parseInt(n) || parseInt(n) < 1 || parseInt(n) > 32) return [];
             var a = parseInt(n),
                 arr=[],
                 b;
