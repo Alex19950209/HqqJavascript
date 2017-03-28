@@ -1,6 +1,6 @@
 
 var Utils = {
-    quickSort:function(arr){
+    quickSort:function(arr){//快速排序法
         if(arr.length < 1) {return arr;}
         var pivotIndex = Math.floor(arr.length / 2),
             pivot = arr.splice(pivotIndex,1)[0],
@@ -15,7 +15,7 @@ var Utils = {
         }
         return this.quickSort(left).concat([pivot],this.quickSort(right));
     },
-    unique:function(arr){
+    unique:function(arr){//数组去重
         if(arr.length < 1) {return arr;}
         var hash = {}, arr1 = [];
         for(var i = 0;i < arr.length;i++){
@@ -26,7 +26,7 @@ var Utils = {
         }
         return arr1;
     },
-    setCookie:function(name,value,path,exp,type){
+    setCookie:function(name,value,path,exp,type){//存储cookie
         if(type){
             localStorage.setItem(name,value);
         }else{
@@ -36,7 +36,7 @@ var Utils = {
         }
 
     },
-    getCookie:function(name,type){
+    getCookie:function(name,type){//获取cookie
         if (type) {
             return localStorage.getItem(name);
         } else {
