@@ -95,6 +95,9 @@ var Utils = {
         }
         if(getDate() == '') return getquantum() + ' ' + getHours() + ':'+ double(minutes);
         return getDate() + ' ' + getquantum() + ' ' + getHours() + ':'+ double(minutes);       
+    },
+    formatJSON: function (jsonStr) {
+        return "JSON" in window ? JSON.parse(jsonStr) : eval("(" + jsonStr + ")");
     }
     
     
