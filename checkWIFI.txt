@@ -1,4 +1,4 @@
-<!DOCTYPE html>  
+ï»¿<!DOCTYPE html>  
 <html lang="en">  
   
     <head>  
@@ -33,7 +33,7 @@
 	   function checkConnection() {
                  var flag  = false;
                  
-                 if("undefined" != typeof cordova){//ÅĞ¶ÏÊÇ·ñ´ò°ü£¨phoneGap£©
+                 if("undefined" != typeof cordova){//åˆ¤æ–­æ˜¯å¦æ‰“åŒ…ï¼ˆphoneGapï¼‰
                      var networkState = navigator.connection.type;
                      if(networkState == 'wifi'){
                          flag = true;
