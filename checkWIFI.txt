@@ -33,7 +33,7 @@
 	   function checkConnection() {
                  var flag  = false;
                  
-                 if("undefined" != typeof cordova){
+                 if("undefined" != typeof cordova){//ÅÐ¶ÏÊÇ·ñ´ò°ü£¨phoneGap£©
                      var networkState = navigator.connection.type;
                      if(networkState == 'wifi'){
                          flag = true;
