@@ -45,7 +45,7 @@ var Utils = {
             return null;
         } 
     },
-    timeStamp: function(stamp){
+    timeStamp: function(stamp){//仿微信返回时间戳
         if(!stamp) return;
         stamp = typeof stamp == 'string'? stamp : stamp.toString();
         if(stamp.length !== 10 && stamp.length !== 13) return 'error';
@@ -96,7 +96,7 @@ var Utils = {
         if(getDate() == '') return getquantum() + ' ' + getHours() + ':'+ double(sminutes);
         return getDate() + ' ' + getquantum() + ' ' + getHours() + ':'+ double(sminutes);       
     },
-    formatJSON: function (jsonStr) {
+    formatJSON: function (jsonStr) {//构造由字符串描述的JavaScript值或对象
         return "JSON" in window ? JSON.parse(jsonStr) : eval("(" + jsonStr + ")");
     }
     
