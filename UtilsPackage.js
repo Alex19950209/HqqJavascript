@@ -93,8 +93,8 @@ var Utils = {
         double = function(o){
             return o = o < 10 ? '0' + o : o;
         }
-        if(getDate() == '') return getquantum() + ' ' + getHours() + ':'+ double(minutes);
-        return getDate() + ' ' + getquantum() + ' ' + getHours() + ':'+ double(minutes);       
+        if(getDate() == '') return getquantum() + ' ' + getHours() + ':'+ double(sminutes);
+        return getDate() + ' ' + getquantum() + ' ' + getHours() + ':'+ double(sminutes);       
     },
     formatJSON: function (jsonStr) {
         return "JSON" in window ? JSON.parse(jsonStr) : eval("(" + jsonStr + ")");
